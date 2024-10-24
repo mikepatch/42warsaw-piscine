@@ -6,16 +6,21 @@
 /*   By: mlata <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 12:56:35 by mlata             #+#    #+#             */
-/*   Updated: 2024/10/19 17:31:49 by mlata            ###   ########.fr       */
+/*   Updated: 2024/10/08 13:16:45 by mlata            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_strlen(char *str)
 {
-	char	*start;
+	int	i;
 
-	start = str;
+	i = 0;
 	while (*str)
-		str++;
-	return (str - start);
+	{
+		if (str[i] != '\0')
+			i++;
+		else
+			return (i);
+	}
+	return (0);
 }
